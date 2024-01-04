@@ -14,7 +14,8 @@ pipeline {
                 sh 'exit 1'
             }
         }
-        stage('Done') {
+    }
+    post {
             always {
                 echo 'always'
             }
@@ -25,5 +26,4 @@ pipeline {
                 echo 'changed'
             }
         }
-    }
 }
