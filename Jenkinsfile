@@ -8,22 +8,5 @@ pipeline {
                 sh 'node --version'
             }
         }
-        stage('Fail') {
-            steps {
-                sh 'echo "Fail"'
-                sh 'exit 1'
-            }
-        }
     }
-    post {
-            always {
-                echo 'always'
-            }
-            failure {
-                echo 'failed'
-            }
-            changed {
-                echo 'changed'
-            }
-        }
 }
